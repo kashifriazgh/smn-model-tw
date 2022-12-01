@@ -3,11 +3,12 @@ import React from 'react';
 export default function index() {
   return (
     <>
-      <div className="bg-slate-100 dark:bg-slate-800">
-        <div className="text-blue-600 text-3xl">Made with tailwindCSS</div>
-        <div className="w-96 h-96 bg-red-400 border-4 border-green-400">
-          <h2 className="text-9xl">hello world</h2>
-        </div>
+      <div className="text-2xl text-green-400 dark:text-white">
+        Change the theme mode to dark to check the result. If text color change
+        to white, it works. Otherwise, it does't work.
+      </div>
+      <div className="bg-red-300 p-8 m-4 text-4xl dark:bg-slate-100">
+        This is a big text.
       </div>
     </>
   );
