@@ -3,7 +3,7 @@ import React from 'react';
 export default function index() {
   return (
     <>
-      <div className="text-2xl text-green-400 dark:text-white">
+      <div className="text-2xl text-green-400 dark:text-white dark:bg-slate-200">
         Change the theme mode to dark to check the result. If text color change
         to white, it works. Otherwise, it does't work.
       </div>
