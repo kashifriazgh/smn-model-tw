@@ -1,5 +1,9 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
+import { AiFillHome } from 'react-icons/ai';
+import { MdVideoLibrary } from 'react-icons/md';
+import { HiUserGroup } from 'react-icons/hi';
+import { IoGameController } from 'react-icons/io5';
 
 export default function HeaderMiddle() {
   const [active, setActive] = useState();
@@ -16,7 +20,7 @@ export default function HeaderMiddle() {
             active == 1 ? 'border-b-2 border-blue-500 ' : ''
           }`}
         >
-          Hom{active}
+          <AiFillHome />
         </div>
         <div
           onClick={changeActive}
@@ -25,7 +29,7 @@ export default function HeaderMiddle() {
             active == 2 ? 'border-b-2 border-blue-500 ' : ''
           }`}
         >
-          Hom {active}
+          <MdVideoLibrary />
         </div>
         <div
           onClick={changeActive}
@@ -34,7 +38,7 @@ export default function HeaderMiddle() {
             active == 3 ? 'border-b-2 border-blue-500 ' : ''
           }`}
         >
-          Hom
+          <HiUserGroup />
         </div>
         <Link href="#">
           <div
@@ -44,7 +48,7 @@ export default function HeaderMiddle() {
               active == 4 ? 'border-b-2 border-blue-500 ' : ''
             }`}
           >
-            Hom
+            <IoGameController />
           </div>
         </Link>
       </div>

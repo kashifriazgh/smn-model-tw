@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function HeaderRight() {
+export default function HeaderLeft() {
   const [showResult, setShowResult] = useState(false);
   const showSearchResult = () => {
     setShowResult(true);
