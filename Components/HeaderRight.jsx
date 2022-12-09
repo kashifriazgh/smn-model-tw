@@ -6,15 +6,15 @@ import { CgMenuGridO } from 'react-icons/cg';
 export default function HeaderRight() {
   return (
     <>
-      <div className="flex gap-6 mr-4">
+      <div className="gap-2 md:gap-4 mr-4 hidden md:flex">
         <div className="hover:cursor-pointer w-8 h-8 flex justify-center items-center bg-gray-100 rounded-full hover:bg-gray-200">
-          <CgMenuGridO />
+          <CgMenuGridO className="text-2xl" />
         </div>
         <div className="hover:cursor-pointer w-8 h-8 flex justify-center items-center bg-gray-100 rounded-full hover:bg-gray-200">
-          <BsMessenger />
+          <BsMessenger className="text-lg text-blue-400" />
         </div>
         <div className="hover:cursor-pointer w-8 h-8 flex justify-center items-center bg-gray-100 rounded-full hover:bg-gray-200">
-          <MdNotifications />
+          <MdNotifications className="text-2xl text-blue-400" />
         </div>
       </div>
     </>

@@ -4,6 +4,7 @@ import { AiFillHome } from 'react-icons/ai';
 import { MdVideoLibrary } from 'react-icons/md';
 import { HiUserGroup } from 'react-icons/hi';
 import { IoGameController } from 'react-icons/io5';
+import { HiMenuAlt2 } from 'react-icons/hi';
 
 export default function HeaderMiddle() {
   const [active, setActive] = useState();
@@ -12,7 +13,7 @@ export default function HeaderMiddle() {
   };
   return (
     <>
-      <div className="flex gap-6">
+      <div className="flex md:gap-4">
         <div
           onClick={changeActive}
           data-id="1"
@@ -49,6 +50,17 @@ export default function HeaderMiddle() {
             }`}
           >
             <IoGameController className="text-2xl text-gray-600" />
+          </div>
+        </Link>
+        <Link href="#">
+          <div
+            onClick={changeActive}
+            data-id="4"
+            className={` px-8 py-2 hover:cursor-pointer hover:bg-gray-100 rounded-md ${
+              active == 4 ? 'border-b-2 border-blue-500 ' : ''
+            }`}
+          >
+            <HiMenuAlt2 className="text-2xl text-gray-600 md:hidden" />
           </div>
         </Link>
       </div>

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { BiSearchAlt2 } from 'react-icons/bi';
+import { FcBrokenLink } from 'react-icons/fc';
 
 export default function HeaderLeft() {
   const [showResult, setShowResult] = useState(false);
@@ -20,9 +22,13 @@ export default function HeaderLeft() {
   return (
     <>
       <div className="--wrapper flex relative gap-2">
-        <div className="--logo max-w-xs bg-green-400">Logo</div>
+        <div className="--logo max-w-xs mt-1 ml-2">
+          <FcBrokenLink className="text-2xl" />
+        </div>
         <div className="--search hidden md:flex rounded-2xl bg-gray-100 relative w-48 flex gap-2">
-          <div className="--search-icon mt-1 ml-1">O</div>
+          <div className="--search-icon mt-2 ml-2">
+            <BiSearchAlt2 />
+          </div>
           <input
             data-id="top-search"
             type="search"
