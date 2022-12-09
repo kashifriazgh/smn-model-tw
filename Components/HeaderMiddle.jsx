@@ -17,7 +17,7 @@ export default function HeaderMiddle() {
         <div
           onClick={changeActive}
           data-id="1"
-          className={` px-8 py-2 hover:cursor-pointer hover:bg-gray-100 rounded-md ${
+          className={` px-5 md:px-8 py-2 hover:cursor-pointer hover:bg-gray-100 rounded-md ${
             active == 1 ? 'border-b-2 border-blue-500 ' : ''
           }`}
         >
@@ -26,7 +26,7 @@ export default function HeaderMiddle() {
         <div
           onClick={changeActive}
           data-id="2"
-          className={` px-8 py-2 hover:cursor-pointer hover:bg-gray-100 rounded-md ${
+          className={` px-5 md:px-8 py-2 hover:cursor-pointer hover:bg-gray-100 rounded-md ${
             active == 2 ? 'border-b-2 border-blue-500 ' : ''
           }`}
         >
@@ -35,7 +35,7 @@ export default function HeaderMiddle() {
         <div
           onClick={changeActive}
           data-id="3"
-          className={` px-8 py-2 hover:cursor-pointer hover:bg-gray-100 rounded-md ${
+          className={` px-5 md:px-8 py-2 hover:cursor-pointer hover:bg-gray-100 rounded-md ${
             active == 3 ? 'border-b-2 border-blue-500 ' : ''
           }`}
         >
@@ -45,7 +45,7 @@ export default function HeaderMiddle() {
           <div
             onClick={changeActive}
             data-id="4"
-            className={` px-8 py-2 hover:cursor-pointer hover:bg-gray-100 rounded-md ${
+            className={` px-5 md:px-8 py-2 hover:cursor-pointer hover:bg-gray-100 rounded-md ${
               active == 4 ? 'border-b-2 border-blue-500 ' : ''
             }`}
           >
@@ -56,9 +56,7 @@ export default function HeaderMiddle() {
           <div
             onClick={changeActive}
             data-id="4"
-            className={` px-8 py-2 hover:cursor-pointer hover:bg-gray-100 rounded-md ${
-              active == 4 ? 'border-b-2 border-blue-500 ' : ''
-            }`}
+            className={` px-5 md:px-8 py-2 hover:cursor-pointer hover:bg-gray-100 rounded-md `}
           >
             <HiMenuAlt2 className="text-2xl text-gray-600 md:hidden" />
           </div>

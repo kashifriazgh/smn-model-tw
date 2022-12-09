@@ -22,7 +22,7 @@ export default function HeaderLeft() {
   return (
     <>
       <div className="--wrapper flex relative gap-2">
-        <div className="--logo max-w-xs mt-1 ml-2">
+        <div className="--logo max-w-xs mt-1 ml-2 hidden">
           <FcBrokenLink className="text-2xl" />
         </div>
         <div className="--search hidden md:flex rounded-2xl bg-gray-100 relative w-48 flex gap-2">
