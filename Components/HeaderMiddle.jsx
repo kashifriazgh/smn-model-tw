@@ -20,7 +20,7 @@ export default function HeaderMiddle() {
             active == 1 ? 'border-b-2 border-blue-500 ' : ''
           }`}
         >
-          <AiFillHome />
+          <AiFillHome className="text-2xl text-gray-600" />
         </div>
         <div
           onClick={changeActive}
@@ -29,7 +29,7 @@ export default function HeaderMiddle() {
             active == 2 ? 'border-b-2 border-blue-500 ' : ''
           }`}
         >
-          <MdVideoLibrary />
+          <MdVideoLibrary className="text-2xl text-gray-600" />
         </div>
         <div
           onClick={changeActive}
@@ -38,7 +38,7 @@ export default function HeaderMiddle() {
             active == 3 ? 'border-b-2 border-blue-500 ' : ''
           }`}
         >
-          <HiUserGroup />
+          <HiUserGroup className="text-2xl text-gray-600" />
         </div>
         <Link href="#">
           <div
@@ -48,7 +48,7 @@ export default function HeaderMiddle() {
               active == 4 ? 'border-b-2 border-blue-500 ' : ''
             }`}
           >
-            <IoGameController />
+            <IoGameController className="text-2xl text-gray-600" />
           </div>
         </Link>
       </div>
