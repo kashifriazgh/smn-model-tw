@@ -2,6 +2,8 @@ import React from 'react';
 import Image from 'next/legacy/image';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 import { RiLiveFill } from 'react-icons/ri';
 import { HiOutlinePhotograph } from 'react-icons/hi';
 import { FcVideoCall } from 'react-icons/fc';
@@ -30,7 +32,7 @@ export default function Main() {
   const mySwal = withReactContent(Swal);
   return (
     <>
-      <div className="--container m-3 p-2 bg-white rounded-lg">
+      <div className="--container dark:bg-slate-800 m-3 p-2 bg-white rounded-lg">
         <CreatePost mySwal={mySwal} />
       </div>
       <div className="p-2 m-1">
@@ -51,6 +53,9 @@ export const CreatePost = (props) => {
         'aria-label': 'Type your message here',
       },
       showCancelButton: true,
+      inputValidator: (result) => {
+        return !result && 'Your need to write something';
+      },
     });
   };
   return (
@@ -83,7 +88,7 @@ export const CreatePost = (props) => {
 export const Post = () => {
   return (
     <>
-      <div className="--post-container mb-5 w-full bg-white p-1">
+      <div className="--post-container dark:bg-slate-800 mb-5 w-full bg-white  p-1">
         <div className="--post-header w-full flex">
           <div className="--post-user-img w-2/12">
             <div className="w-12 h-12 overflow-hidden rounded-full border cursor-pointer border-gray-200 hover:border-gray-300 p-0.5">
@@ -97,12 +102,23 @@ export const Post = () => {
             <p className="--date text-gray-400 text-sm">5 December at 4:50</p>
           </div>
           <div className="--post-more-actions w-1/5 flex items-center flex-row-reverse gap-2">
-            <div className="text-lg cursor-pointer">
-              <AiOutlineClose />
-            </div>
-            <div className="text-lg">
-              <TfiMoreAlt />
-            </div>
+            <Tippy
+              allowHTML
+              content={<h2 className="bg-black p-2 rounded-md">Hide</h2>}
+            >
+              <div className="text-lg cursor-pointer">
+                <AiOutlineClose />
+              </div>
+            </Tippy>
+
+            <Tippy
+              allowHTML
+              content={<h2 className="bg-black p-2 rounded-md">More</h2>}
+            >
+              <div className="text-lg">
+                <TfiMoreAlt />
+              </div>
+            </Tippy>
           </div>
         </div>{' '}
         {/* Post Header end */}
@@ -151,7 +167,7 @@ export const Post = () => {
         </div>
       </div>{' '}
       {/* First Post End */}
-      <div className="--post-container mb-5 w-full bg-white p-1">
+      <div className="--post-container dark:bg-slate-800 mb-5 w-full bg-white p-1">
         <div className="--post-header w-full flex">
           <div className="--post-user-img w-2/12">
             <div className="w-12 h-12 overflow-hidden rounded-full border cursor-pointer border-gray-200 hover:border-gray-300 p-0.5">
@@ -165,12 +181,23 @@ export const Post = () => {
             <p className="--date text-gray-400 text-sm">21 November at 6:10</p>
           </div>
           <div className="--post-more-actions w-1/5 flex items-center flex-row-reverse gap-2">
-            <div className="text-lg cursor-pointer">
-              <AiOutlineClose />
-            </div>
-            <div className="text-lg">
-              <TfiMoreAlt />
-            </div>
+            <Tippy
+              allowHTML
+              content={<h2 className="bg-black p-2 rounded-md">Hide</h2>}
+            >
+              <div className="text-lg cursor-pointer">
+                <AiOutlineClose />
+              </div>
+            </Tippy>
+
+            <Tippy
+              allowHTML
+              content={<h2 className="bg-black p-2 rounded-md">More</h2>}
+            >
+              <div className="text-lg">
+                <TfiMoreAlt />
+              </div>
+            </Tippy>
           </div>
         </div>{' '}
         {/* Post Header end */}
@@ -219,7 +246,7 @@ export const Post = () => {
         </div>
       </div>{' '}
       {/* Second Post End */}
-      <div className="--post-container mb-5 w-full bg-white p-1">
+      <div className="--post-container dark:bg-slate-800 mb-5 w-full bg-white p-1">
         <div className="--post-header w-full flex">
           <div className="--post-user-img w-2/12">
             <div className="w-12 h-12 overflow-hidden rounded-full border cursor-pointer border-gray-200 hover:border-gray-300 p-0.5">
@@ -233,12 +260,23 @@ export const Post = () => {
             <p className="--date text-gray-400 text-sm">28 November at 11:33</p>
           </div>
           <div className="--post-more-actions w-1/5 flex items-center flex-row-reverse gap-2">
-            <div className="text-lg cursor-pointer">
-              <AiOutlineClose />
-            </div>
-            <div className="text-lg">
-              <TfiMoreAlt />
-            </div>
+            <Tippy
+              allowHTML
+              content={<h2 className="bg-black p-2 rounded-md">Hide</h2>}
+            >
+              <div className="text-lg cursor-pointer">
+                <AiOutlineClose />
+              </div>
+            </Tippy>
+
+            <Tippy
+              allowHTML
+              content={<h2 className="bg-black p-2 rounded-md">More</h2>}
+            >
+              <div className="text-lg">
+                <TfiMoreAlt />
+              </div>
+            </Tippy>
           </div>
         </div>{' '}
         {/* Post Header end */}
@@ -287,7 +325,7 @@ export const Post = () => {
         </div>
       </div>{' '}
       {/* Third Post End */}
-      <div className="--post-container mb-5 w-full bg-white p-1">
+      <div className="--post-container dark:bg-slate-800 mb-5 w-full bg-white p-1">
         <div className="--post-header w-full flex">
           <div className="--post-user-img w-2/12">
             <div className="w-12 h-12 overflow-hidden rounded-full border cursor-pointer border-gray-200 hover:border-gray-300 p-0.5">
@@ -301,12 +339,23 @@ export const Post = () => {
             <p className="--date text-gray-400 text-sm">2 December at 1:05</p>
           </div>
           <div className="--post-more-actions w-1/5 flex items-center flex-row-reverse gap-2">
-            <div className="text-lg cursor-pointer">
-              <AiOutlineClose />
-            </div>
-            <div className="text-lg">
-              <TfiMoreAlt />
-            </div>
+            <Tippy
+              allowHTML
+              content={<h2 className="bg-black p-2 rounded-md">Close</h2>}
+            >
+              <div className="text-lg cursor-pointer">
+                <AiOutlineClose />
+              </div>
+            </Tippy>
+
+            <Tippy
+              allowHTML
+              content={<h2 className="bg-black p-2 rounded-md">More</h2>}
+            >
+              <div className="text-lg">
+                <TfiMoreAlt />
+              </div>
+            </Tippy>
           </div>
         </div>{' '}
         {/* Post Header end */}
@@ -354,6 +403,7 @@ export const Post = () => {
           </div>
         </div>
       </div>{' '}
+      <hr />
       {/* Fourth Post End */}
     </>
   );

@@ -10,10 +10,15 @@ import { RxVideo } from 'react-icons/rx';
 import { MdWatchLater } from 'react-icons/md';
 import { RiFlag2Fill } from 'react-icons/ri';
 
-export default function LeftSideBar() {
+export default function LeftSideBar(props) {
+  const { openMenu } = props;
   return (
     <>
-      <div className="--box w-full py-1">
+      <div
+        className={`--box dark:bg-slate-800 bg-white z-50 md:z-0 w-full py-1  absolute md:sticky ${
+          openMenu ? 'sm:right-0 md:left-0' : '-right-full md:left-0'
+        }`}
+      >
         <MajorMenu />
         <hr />
         <SuggestedMenu />

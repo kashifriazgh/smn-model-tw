@@ -6,7 +6,11 @@ import { HiUserGroup } from 'react-icons/hi';
 import { IoGameController } from 'react-icons/io5';
 import { HiMenuAlt2 } from 'react-icons/hi';
 
-export default function HeaderMiddle() {
+export default function HeaderMiddle(props) {
+  const { openMenu, setOpenMenu } = props;
+  const toggleMenu = () => {
+    setOpenMenu(!openMenu);
+  };
   const [active, setActive] = useState();
   const changeActive = (e) => {
     setActive(e.target.dataset.id);
@@ -58,7 +62,10 @@ export default function HeaderMiddle() {
             data-id="4"
             className={` px-5 md:px-8 py-2 hover:cursor-pointer hover:bg-gray-100 rounded-md `}
           >
-            <HiMenuAlt2 className="text-2xl text-gray-600 md:hidden" />
+            <HiMenuAlt2
+              onClick={toggleMenu}
+              className="text-2xl text-gray-600 md:hidden"
+            />
           </div>
         </Link>
       </div>

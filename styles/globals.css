@@ -4,4 +4,30 @@
 
 body {
   background-color: #f0f2f5;
+  @apply dark:bg-slate-800;
+}
+
+/* Style for Tippy.js */
+.tippy-box[data-state='visible'],
+.tippy-box[data-state='hidden'] {
+  box-shadow: none;
+  background: transparent;
+}
+
+.popup-wrapper {
+  width: auto;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+.popup-content {
+  position: absolute;
+  top: 100%;
+  background-color: #f7f8fa;
+  padding: 10px;
+  right: 0;
+  z-index: 999;
+}
+.search-bar {
+  background: #f0f2f5;
 }

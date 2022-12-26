@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tippyjs/react": "^4.2.6",
     "next": "latest",
     "next-themes": "^0.2.1",
     "react": "18.2.0",

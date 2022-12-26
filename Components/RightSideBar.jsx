@@ -43,7 +43,7 @@ export default function RightSideBar() {
 export const TopBanner = () => {
   return (
     <>
-      <div className="w-full h-36 rounded-md bg-white cursor-pointer hover:shadow-md hover:opacity-80 overflow-hidden object-cover">
+      <div className="w-full h-auto rounded-md bg-white cursor-pointer hover:shadow-md hover:opacity-80 overflow-hidden object-cover">
         <Image src={topBannerImg} layout="responsive" />
       </div>
     </>

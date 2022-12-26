@@ -3,7 +3,7 @@ import Header from './Header';
 import Head from 'next/head';
 
 export default function Layout(props) {
-  const { children } = props;
+  const { children, openMenu, setOpenMenu } = props;
   return (
     <>
       <Head>
@@ -13,7 +13,7 @@ export default function Layout(props) {
         <title>SMN</title>
       </Head>
       <div className="w-full">
-        <Header />
+        <Header openMenu={openMenu} setOpenMenu={setOpenMenu} />
         {children}
       </div>
     </>

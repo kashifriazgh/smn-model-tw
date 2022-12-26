@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTheme } from 'next-themes';
 import HeaderLeft from './HeaderLeft';
 import HeaderMiddle from './HeaderMiddle';
 import HeaderRight from './HeaderRight';
 
-export default function Header() {
+export default function Header(props) {
+  const { openMenu, setOpenMenu } = props;
+
   const { theme, setTheme } = useTheme();
-  setTheme('light');
 
   return (
     <>
@@ -16,7 +17,7 @@ export default function Header() {
             <HeaderLeft />
           </div>
           <div className="-Center">
-            <HeaderMiddle />
+            <HeaderMiddle openMenu={openMenu} setOpenMenu={setOpenMenu} />
           </div>
           <div className="-Right">
             <HeaderRight />
